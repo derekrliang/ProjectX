@@ -73,12 +73,12 @@ nav a:hover {
 INTRODUCTION
 ***********************************/
 
-article#intro {	
+article#banner {	
 	padding: 100px 0 100px 0;
 	background: #F8F8F8;
 }
 
-article#intro p {
+article#banner p {
 	font-size: 32px;
 }
 
