@@ -73,10 +73,12 @@ nav a:hover {
 BANNER
 ***********************************/
 
+
 article#banner {	
 	padding: 100px 0 100px 0;
 	background: #F8F8F8;
 }
+
 
 article#banner p {
 	font-size: 32px;
@@ -119,18 +121,3 @@ span.glyphicon {
 #go-top {
 	color:#F90;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
