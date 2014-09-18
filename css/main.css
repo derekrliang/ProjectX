@@ -73,20 +73,14 @@ nav a:hover {
 INTRODUCTION
 ***********************************/
 
-<<<<<<< HEAD
-article#banner {	
-=======
+
 article#intro {	
->>>>>>> added base site, imgs, etc
 	padding: 100px 0 100px 0;
 	background: #F8F8F8;
 }
 
-<<<<<<< HEAD
-article#banner p {
-=======
+
 article#intro p {
->>>>>>> added base site, imgs, etc
 	font-size: 32px;
 }
 
