@@ -3,7 +3,6 @@
 /**********************************
 HEADING & NAVI
 ***********************************/
-
 header {
   padding: 10px 0 0 0;
 }
@@ -47,4 +46,14 @@ h3, h4, .dev-title {
 	display: inline-block;
 }
 
+}
+
+@media screen and (min-width: 1020px) {
+i.fa-bars {
+	display: none;	
+}
+
+.menu {
+	display: block;
+}	
 }

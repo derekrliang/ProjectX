@@ -10,6 +10,35 @@ body {
 /**********************************
 NAVIGATION
 ***********************************/
+i.fa-bars {
+	display: block;
+	color: white;
+	font-size: 18px;
+	padding: 15px 15px;
+	cursor: pointer;
+	
+	position: fixed;
+	left: 0;
+	
+	width: 50px;
+	
+	background: rgba(0,0,0,0.9)
+}
+
+.menu {
+	display: none;	
+}
+
+.mini-menu {
+	max-width: 130px;
+	background: black;
+	height: 100%;
+}
+
+.show {
+	display: block !important;	
+}
+
 nav {
 	position: fixed;
 	top: 50px;
@@ -21,33 +50,22 @@ nav ul {
 	list-style-type: none;
 }
 
-
 nav a {
 	font-size: 18px;
 	display: block;
 	padding: 20px;
-	min-width: 150px;
+	min-width: 130px;
 
-	border: 2px solid black;
 	background: black;
 	color: white;
 	
-	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
-	transition: border .25s linear, color .25s linear, background-color .25s linear;	
-	
-	-moz-transition: 400ms ease -moz-transform;
-	-ms-transition: 400ms ease -ms-transform;
-	-o-transition: 400ms ease -o-transform;
-	-webkit-transition: 400ms ease -webkit-transform;
-	transition: 400ms ease transform;
+	webkit-transition: border-left 0.1s;
+	-moz-transition: border-left 0.1s;
+	transition: border-left 0.1s;
 }
 
-nav div:hover a {	
-	-moz-transform: translateX(10%);
-	-ms-transform: translateX(10%);
-	-o-transform: translateX(10%);
-	-webkit-transform: translateX(10%);
-	transform: translateX(10%);
+nav div:hover a {
+	border-left: 10px solid #ffc94a;
 }
 
 a, a:link, a:visited, a:hover, a:active {

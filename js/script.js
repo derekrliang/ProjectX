@@ -1,33 +1,49 @@
-console.log("script.js");
-
-var devTCMap = {};
-var devTitles = document.getElementsByClassName('dev-title');
-var devContents = document.getElementsByClassName('dev-content');
-
-for (var i = 0; i < devTitles.length; i++) {
-	devTCMap[devTitles[i].getAttribute("hash")] = devContents[i];
-	devTitles[i].addEventListener('click', function() {
-		if (devTCMap[this.getAttribute("hash")].classList.contains("hide-content")) {
-			// Reset the other ones
-			for (var j = 0; j < devTitles.length; ++j) {
-				var title = devTitles[j];
-				if (title == this) {
-					this.className = "dev-title dev-title-active";
-					devTCMap[this.getAttribute("hash")].className = "dev-content show-content"
-				}
-				else {
-					title.className = "dev-title";
-					devTCMap[title.getAttribute("hash")].className = "dev-content hide-content"
-				}
-			}
-		}
-		else if (devTCMap[this.getAttribute("hash")].classList.contains("show-content")) {
-			this.className = "dev-title";
-			devTCMap[this.getAttribute("hash")].className = "dev-content hide-content";
-		}
-	});
-}
-
+$(document).ready(function() {
+	
+	if ($(window).width() > 1075) {
+		$('body').css({
+			'margin-left': '0px'
+		});
+		
+	} else {
+		$('.menu').addClass('mini-menu');
+	}
+						
+  $('.fa-bars').click(function() {
+	  if ($(this).hasClass('on')) {
+		  $('.menu').removeClass('show');
+		  $(this).removeClass('on');
+		  
+		  		$(this).css({
+					'width': '50px'
+				});
+				
+				$('body').css({
+					'margin-left': '0px'
+				});
+	  } else {
+		  $('.menu').addClass('show');
+		  $(this).addClass('on');
+		  
+		  		$(this).css({
+					'width': '130px'
+				});
+				
+				$('body').css({
+					'margin-left': '130px'
+				});
+	  }
+  });
+  
+  $(window).resize(function() {
+	  if ($(window).width() > 1075) {		
+		$('.menu').removeClass('mini-menu');
+	  } else {
+		$('.menu').addClass('mini-menu');
+	  }
+	  });
+	  
+	  
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -41,4 +57,7 @@ $(function() {
       }
     }
   });
+});
+
+
 });
