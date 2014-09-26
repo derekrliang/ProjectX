@@ -22,7 +22,9 @@ i.fa-bars {
 	
 	width: 50px;
 	
-	background: rgba(0,0,0,0.9)
+	background: rgba(0,0,0,0.9);
+	
+	z-index: 10;
 }
 
 .menu {
